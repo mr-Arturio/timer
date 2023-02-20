@@ -1,7 +1,9 @@
 let seconds = process.argv.slice(2);
 
 function timer(seconds) {
-  for (let sec of seconds) {
+  //console.log(seconds);
+  for (let secString of seconds) {
+    const sec = Number(secString)
     if (typeof sec !== 'number' || sec < 0) {
       continue; // ignore/skip non-numbers and negative numbers
     }
